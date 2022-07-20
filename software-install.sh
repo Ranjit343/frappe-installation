@@ -100,9 +100,6 @@ cd frappe-bench
 bench get-app --branch version-13 erpnext
 bench new-site first-site
 bench use first-site
-me=$(whoami)
-printf "${yellow}Moving to production mode${clear}\n"
-sudo bench setup production $me  --yes
 sudo supervisorctl stop all
 sudo service nginx stop
 #After the frappe-bench folder is created, changing your directory run bench
