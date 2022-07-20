@@ -97,7 +97,6 @@ sudo apt install xdotool -y
 cd ~
 bench init --frappe-branch version-13 frappe-bench
 cd frappe-bench
-bench get-app --branch version-13 erpnext
 bench new-site first-site
 bench use first-site
 sudo supervisorctl stop all
@@ -106,6 +105,7 @@ sudo service nginx stop
 cd ~
 cd frappe-bench
 printf "${yellow}Project Starting...${clear}\n"
+bench get-app --branch version-13 erpnext
 #Get ERPNext application from GitHub
 #Download the ERPNext application from frappe Github repo.
 #We will get version 13.
